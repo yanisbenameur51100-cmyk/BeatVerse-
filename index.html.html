@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Beatverse – Deviens une star</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--p:#121212;--h:#2d2d2d;--m:#a7a7a7;--g:#1ed760;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:#000;color:#fff;font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+#app{height:100%;display:grid;grid-template-columns:230px 1fr;grid-template-rows:minmax(0,1fr) 78px;gap:8px;padding:8px}
+#side{background:var(--p);border-radius:10px;padding:14px 8px;overflow:auto}
+.logo{font-weight:800;font-size:20px;padding:4px 12px 14px}.logo i{color:var(--g);font-style:normal}
+.ni{display:flex;align-items:center;gap:14px;width:100%;padding:10px 12px;border-radius:8px;color:var(--m);font-weight:600;text-align:left}.ni:hover,.ni.on{color:#fff}.ni.on{background:var(--h)}.e{font-size:16px}
+.hd{color:var(--m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:14px 12px 4px}
+#main{background:linear-gradient(#2a2a55,var(--p) 280px);border-radius:10px;overflow:auto;padding:0 22px 30px;min-height:0}
+#top{position:sticky;top:0;z-index:5;display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 -22px;padding:12px 22px;background:#12121eE6;backdrop-filter:blur(8px)}
+.tp{background:#fff1;border-radius:20px;padding:5px 12px;font-weight:700;white-space:nowrap}
+.xb{flex:1;min-width:70px;height:6px;background:#fff3;border-radius:3px;overflow:hidden}.xb i{display:block;height:100%;width:0;background:var(--g);transition:width .4s}
+h1{font-size:30px;margin:14px 0 10px}h2{font-size:20px;margin:24px 0 10px}h3{margin:0 0 8px;font-size:13px;color:var(--m)}.mu,small{color:var(--m)}
+.btn{background:var(--g);color:#000;font-weight:700;border-radius:30px;padding:9px 18px;margin:4px 6px 4px 0}.btn:hover{transform:scale(1.04)}.btn.s{background:#fff2;color:#fff;padding:6px 12px}.btn.big{padding:13px 26px;font-size:16px}
+.chip{background:var(--h);border-radius:20px;padding:7px 14px;margin:3px 4px 3px 0}.chip.on{background:var(--g);color:#000;font-weight:700}.chip:disabled{opacity:.4;cursor:not-allowed}
+.pn{background:#ffffff0d;border-radius:10px;padding:14px;margin:10px 0}
+input,select{background:#2a2a2a;border:1px solid #444;border-radius:8px;padding:9px 12px;width:100%;max-width:360px}
+h1 input{background:transparent;border:0;border-bottom:2px dashed #fff5;font-size:inherit;font-weight:800;width:auto;max-width:70%;padding:0;border-radius:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px}
+.card{background:#ffffff0d;border-radius:10px;padding:12px;cursor:pointer}.card:hover{background:#ffffff1a}.card b,.card small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv{aspect-ratio:1;border-radius:8px;margin-bottom:10px;box-shadow:0 6px 18px #0008}.cv.s{width:44px;margin:0;flex:none;border-radius:5px}
+.st{background:#ffffff0d;border-radius:10px;padding:14px}.st b{font-size:24px;display:block}.c4{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.row{display:flex;align-items:center;gap:12px;padding:7px 10px;border-radius:8px;cursor:pointer}.row:hover{background:#ffffff14}.gr{flex:1;min-width:0}.gr b,.gr small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ix{width:20px;color:var(--m);text-align:center}
+.qb{border-radius:5px;padding:2px 8px;font-weight:700;font-size:12px;background:#fff2;white-space:nowrap}
+.pc{font-size:11px;padding:3px 8px;border-radius:12px;background:#fff1;color:var(--m);margin-left:3px}.pc.on{background:var(--g);color:#000}
+.mel{display:grid;grid-template-columns:repeat(16,1fr);gap:3px;height:120px}.ce{background:#ffffff14;border-radius:4px;position:relative;padding:0}.ce i{position:absolute;bottom:0;left:0;right:0;background:var(--g);border-radius:4px}
+.nt{display:flex;gap:10px;align-items:center;padding:8px 10px;background:#ffffff0d;border-radius:8px;margin-bottom:6px}.nt p{margin:0;flex:1}
+.vn{padding:10px 12px;border-radius:8px;background:#ffffff0d;margin-bottom:6px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}.vn.on{outline:2px solid var(--g)}.vn.lk{opacity:.4;cursor:not-allowed}
+#pl{grid-column:1/3;display:flex;align-items:center;gap:16px;padding:0 10px}.pi{display:flex;gap:10px;align-items:center;min-width:0;flex:1}
+.ctr{flex:1.4;text-align:center;min-width:0}.ctr button{font-size:18px}.pb{background:#fff;color:#000;width:36px;height:36px;border-radius:50%;font-size:15px!important;margin:0 8px}
+.pg{display:flex;align-items:center;gap:8px}.bar{flex:1;height:5px;background:#fff3;border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--g)}
+#ts{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(100px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:6px;z-index:9;pointer-events:none;width:min(92vw,420px)}
+#ts div{background:#fff;color:#000;border-radius:10px;padding:10px 14px;font-weight:600;box-shadow:0 6px 20px #000a;animation:in .3s}@keyframes in{from{opacity:0;transform:translateY(10px)}}
+@media(max-width:800px){#app{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) 64px 58px;gap:6px;padding:6px}#main{grid-row:1;padding:0 14px 20px}#top{margin:0 -14px;padding:10px 14px}#side{grid-row:3;display:flex;padding:0;overflow-x:auto;gap:2px}#nv{display:flex}.logo,.hd,.sp2,.hm,.pg small{display:none}.ni{flex-direction:column;gap:0;padding:6px 10px;font-size:10px;width:auto;flex:none;white-space:nowrap}.e{font-size:18px}#pl{grid-column:1;grid-row:2}h1{font-size:24px}#ts{bottom:calc(140px + env(safe-area-inset-bottom,0px))}.pc{margin:2px 0 0 2px}.tp{padding:3px 9px;font-size:12px}#top{gap:6px}}
+</style></head><body>
+<div id="app"><aside id="side"><div class="logo"><i>●</i> Beatverse</div><div id="nv"></div></aside>
+<main id="main"><div id="top"><span class="tp">💰 <span data-b="m"></span></span><span class="tp">👥 <span data-b="f"></span></span><span class="tp">⭐ <span data-b="rep"></span></span><span class="tp" data-b="lv"></span><div class="xb"><i id="xb"></i></div><button class="tp" id="bell" data-a="bell">🔔</button></div><div id="v"></div></main>
+<footer id="pl"><div class="pi"><div class="cv s" id="pc" style="background:#333"></div><div class="gr"><b id="pt">Aucun titre</b><small id="pa">Crée ton premier son</small></div></div>
+<div class="ctr"><div><button data-a="prv">⏮</button><button class="pb" id="pp" data-a="tog">▶</button><button data-a="nxt">⏭</button></div><div class="pg"><small id="tc">0:00</small><div class="bar"><i id="pf"></i></div><small id="td">0:00</small></div></div><div class="sp2" style="flex:1"></div></footer></div>
+<div id="ts"></div>
+<script>
+const $=s=>document.querySelector(s),KEY="beatverse_v1",PN={sp:"Spotify",yt:"YouTube",ig:"Instagram"};
+const fm=n=>n>=1e6?(n/1e6).toFixed(1)+" M":n>=1e4?(n/1e3).toFixed(1)+" k":Math.floor(n).toLocaleString("fr-FR");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const need=l=>Math.round(40*Math.pow(l,1.7)),fans=()=>S.sp.f+S.yt.s+S.ig.f,T=id=>S.tr.find(t=>t.id==id);
+const qn=q=>q<40?"Brouillon":q<60?"Correct":q<80?"Bon":q<92?"Hit":"Chef-d’œuvre",mmss=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
+const INST=[["Piano",1,"🎹"],["Synthé",1,"🎛️"],["Guitare",2,"🎸"],["Basse",3,"🔊"],["808",4,"🥁"],["Violon",5,"🎻"]];
+const STY=[["Pop",1,110,[0,2,4,5,7,9,11,12]],["Lo-fi",1,80,[0,2,3,5,7,9,10,12]],["Hip-Hop",2,92,[0,3,5,7,10,12,15,17]],["Électro",3,124,[0,2,4,7,9,12,14,16]],["Rock",4,132,[0,3,5,6,7,10,12,15]],["Trap",5,140,[0,1,3,5,7,8,10,12]]];
+const RH=[["Basique","x...x...x...x...","....x.......x...","x.x.x.x.x.x.x.x."],["Syncopé","x..x..x...x..x..","....x.......x..x","xxxxxxxxxxxxxxxx"],["House","x...x...x...x...","....x.......x...","..x...x...x...x."],["Trap","x.....x...x.....","........x.......","x.xxx.x.xxx.xx.x"]];
+const GEAR=[["Micro USB",30,4],["Casque de studio",120,5],["Interface audio",500,6],["Enceintes pro",2000,8],["Studio complet",9000,10]];
+const VEN=[["Bar du coin",40,6,0],["Café-théâtre",150,10,60],["Salle de quartier",600,15,400],["La Cigale",1400,25,2000],["Zénith",6000,40,10000],["Stade de France",60000,60,80000]];
+const ART=[["Lila Nova",20],["MC Brûlot",35],["DJ Kōhi",50],["Sasha Vale",65],["Neon Dahlia",80],["KAÏRO",95]];
+const W1=["Midnight","Neon","Velvet","Solar","Cristal","Fantôme","Aurore","Turbo","Bleu","Électrique"],W2=["Dreams","Waves","Nights","Pulse","Souvenirs","City","Fever","Echo","Rêves","Étoile"];
+const NAV=[["home","🏠","Accueil"],["studio","🎛️","Studio"],["lib","📚","Bibliothèque"],["collab","🤝","Collabs"],["conc","🎤","Concerts"],["stats","📊","Stats"]],PLT=[["sp","🟢","Spotify"],["yt","▶️","YouTube"],["ig","📸","Instagram"]];
+const GL=[["Crée ton premier son",s=>s.tr.length>=1,10],["Publie-le sur Spotify",s=>s.tr.some(t=>t.p.sp),20],["Atteins 100 écoutes",s=>s.tot.st>=100,30],["Atteins le niveau 2",s=>s.lv>=2,50],["Gagne 50 fans",s=>fans()>=50,60],["Achète du matériel",s=>s.gear>0,40],["Sors un feat",s=>s.tot.ft>=1,100],["Donne ton premier concert",s=>s.tot.cn>=1,150],["Atteins 1 000 fans",s=>fans()>=1000,500]];
+const D=()=>({m:0,rep:0,xp:0,lv:1,gear:0,name:"Artiste inconnu",tr:[],al:[],pl:[],sp:{f:0,ml:0},yt:{s:0,v:0},ig:{f:0,l:0},rv:{sp:0,yt:0},tot:{st:0,cn:0,ft:0},nt:[],gl:[],id:1,bo:0,hist:[],t:0,cd:{},un:0,ev:0,lc:null});
+let S,view="home",ui={sel:new Set(),lt:"s",v:0,set:[],last:0,rs:0,d:null};
+try{S=Object.assign(D(),JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){S=D()}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+function gen(){let c=0,m=[];for(let i=0;i<16;i++){if(Math.random()<.28&&i%4){m.push(-1);continue}c=Math.max(0,Math.min(7,c+[-2,-1,-1,0,1,1,2][Math.random()*7|0]));m.push(c)}m[0]=0;if(Math.random()<.6)m[15]=0;return m}
+const nd=()=>({name:"",in:0,sy:0,rh:0,bpm:STY[0][2],mel:gen()});
+const cv=t=>{const s=t.sd,h=s%360,h2=(h+60+s%90)%360;return`background:radial-gradient(circle at ${20+s%60}% ${20+(s>>3)%60}%,hsl(${h2} 90% 65%) 0 ${12+s%14}%,transparent 0),linear-gradient(${s%360}deg,hsl(${h} 70% 45%),hsl(${h2} 70% 18%))`};
+/* ---------- Audio ---------- */
+let AC,MG,NB,cur=null,tm,queue=[],qi=-1,last=null;
+const IP={Piano:["triangle",.005,.6,3500,.55],Synthé:["sawtooth",.01,.3,1800,.22],Guitare:["square",.005,.4,1500,.16],Basse:["sine",.01,.35,700,.8],"808":["sine",.003,.8,500,.95],Violon:["sawtooth",.12,.55,2600,.2]},OC={Piano:12,Synthé:12,Guitare:12,Basse:-12,"808":-12,Violon:24};
+function ac(){if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();NB=AC.createBuffer(1,AC.sampleRate,AC.sampleRate);const d=NB.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1}if(AC.state==="suspended")AC.resume()}
+function tone(n,f,t,d){const[w,a,r,c,v]=IP[n],o=AC.createOscillator(),g=AC.createGain(),fl=AC.createBiquadFilter();o.type=w;fl.type="lowpass";fl.frequency.value=c;o.frequency.setValueAtTime(n==="808"?f*2:f,t);if(n==="808")o.frequency.exponentialRampToValueAtTime(f,t+.08);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+d+r*.5);o.connect(fl);fl.connect(g);g.connect(MG);o.start(t);o.stop(t+d+r+.1)}
+function dr(k,t){const g=AC.createGain();g.connect(MG);if(k==="k"){const o=AC.createOscillator();o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(40,t+.12);g.gain.setValueAtTime(1,t);g.gain.exponentialRampToValueAtTime(.001,t+.25);o.connect(g);o.start(t);o.stop(t+.3)}else{const n=AC.createBufferSource(),f=AC.createBiquadFilter();n.buffer=NB;f.type="highpass";f.frequency.value=k==="s"?1500:7000;g.gain.setValueAtTime(k==="s"?.5:.18,t);g.gain.exponentialRampToValueAtTime(.001,t+(k==="s"?.15:.04));n.connect(f);f.connect(g);n.start(t);n.stop(t+.2)}}
+function stp(tr,i,t){const r=RH[tr.rh];if(r[1][i]==="x")dr("k",t);if(r[2][i]==="x")dr("s",t);if(r[3][i]==="x")dr("h",t);const m=tr.mel[i];if(m>=0){const n=INST[tr.in][0];tone(n,130.81*Math.pow(2,(STY[tr.sy][3][m]+OC[n])/12),t,60/tr.bpm/4*1.8)}}
+function play(tr,q){ac();stop(1);MG=AC.createGain();MG.gain.value=.6;MG.connect(AC.destination);last=tr;queue=q||[tr.id];qi=queue.indexOf(tr.id);const c=cur={tr,s:0,t:AC.currentTime+.06,n:tr.pv?48:128};
+tm=setInterval(()=>{if(cur!==c)return;while(c.t<AC.currentTime+.2){stp(tr,c.s%16,c.t);c.t+=60/tr.bpm/4;if(++c.s>=c.n){const nx=T(queue[qi+1]);if(nx&&!tr.pv)play(nx,queue);else stop();return}}},30);pui()}
+function stop(s){clearInterval(tm);cur=null;if(MG){const m=MG;m.gain.setTargetAtTime(0,AC.currentTime,.03);setTimeout(()=>m.disconnect(),400);MG=null}if(!s)pui()}
+function pui(){const t=cur?cur.tr:last;if(t){$("#pt").textContent=t.name;$("#pa").textContent=t.pv?"Aperçu du studio":S.name;$("#pc").style.cssText=cv(t)}$("#pp").textContent=cur?"⏸":"▶"}
+setInterval(()=>{if(cur){const st=60/cur.tr.bpm/4;$("#pf").style.width=cur.s/cur.n*100+"%";$("#tc").textContent=mmss(cur.s*st);$("#td").textContent=mmss(cur.n*st)}else $("#pf").style.width="0"},250);
+/* ---------- Jeu ---------- */
+function toast(m){const d=document.createElement("div");d.textContent=m;$("#ts").append(d);setTimeout(()=>d.remove(),3600);while($("#ts").children.length>3)$("#ts").firstChild.remove()}
+function note(txt,ico,act){S.nt.unshift({id:S.id++,txt,ico:ico||"🔔",act});S.nt.length=Math.min(S.nt.length,25);S.un++;toast(txt);hdr();if(view==="home"&&document.activeElement.tagName!=="INPUT")render()}
+function addXp(n){S.xp+=n;while(S.xp>=need(S.lv)){S.xp-=need(S.lv);S.lv++;const u=[...INST,...STY].filter(x=>x[1]===S.lv).map(x=>x[0]);note("⭐ Niveau "+S.lv+" !"+(u.length?" Débloqué : "+u.join(", ")+".":"")+(S.lv===2?" YouTube et Instagram sont ouverts !":""),"⭐")}}
+function qual(d){const n=d.mel.filter(x=>x>=0),L=n.length;let q=15+S.lv*1.5+GEAR.slice(0,S.gear).reduce((a,g)=>a+g[2],0);q+=L>=8&&L<=14?12:L>=5?6:0;let st=0;for(let i=1;i<L;i++)if(Math.abs(n[i]-n[i-1])<=2)st++;if(L>1)q+=st/(L-1)*16;const v=new Set(n).size;q+=v>=3&&v<=6?8:v>1?4:0;if(n[L-1]===0)q+=5;q+=INST[d.in][1]*1.5+Math.random()*9;return Math.min(100,Math.round(q))}
+const chance=p=>Math.min(.95,Math.max(.15,(fans()*.1+S.rep*2+S.lv*5)/(p*1.5)));
+function feat(src,an,p){const t={...src,id:S.id++,name:src.name+" (feat. "+an+")",q:Math.min(100,src.q+Math.round(p/10)),mu:1+p/60,ft:an,p:{},st:0,vw:0,lk:0,hy:1,sd:(src.sd*7+p)%100000};S.tr.unshift(t);S.tot.ft++;addXp(25+(p/4|0));note("🎶 Feat avec "+an+" enregistré ! Publie-le pour profiter de sa popularité.","🎶")}
+function evt(k){const pb=S.tr.filter(t=>t.p.sp||t.p.yt||t.p.ig);if(!pb.length)return;const t=pb[Math.random()*pb.length|0],L=["Cette prod est folle 🔥","Je l’écoute en boucle depuis ce matin !","Le refrain me reste dans la tête 😍","Mouais… j’attendais mieux.","Mon son de la semaine !!","Quel talent, abonnement direct !"],r=k===0?0:Math.random()*7|0;
+if(r<2){S.sp.f+=3;note("💬 @"+["luna_92","beatfan","kevin.b","m_ayla"][Math.random()*4|0]+" sur « "+t.name+" » : "+L[Math.random()*L.length|0],"💬")}
+else if(r===2){t.hy=4;note("🔥 « "+t.name+" » devient viral ! Les écoutes explosent.","🔥")}
+else if(r===3){S.tr.forEach(x=>x.hy+=.4);S.rep+=2;note("📰 Un blog musique parle de toi : buzz général !","📰")}
+else if(r===4&&fans()>=100&&S.bo<S.t){const a=Math.round(300*S.lv);note("💼 Neon Records te propose "+a+" € d’avance + promo de 2 min (revenus −10 %).","💼",{l:"Accepter",a:"label",v:a})}
+else if(r===5&&fans()>=50){const A=ART[Math.random()*ART.length|0];note("🤝 "+A[0]+" te propose un feat !","🤝",{l:"Accepter",a:"req",v:A[0]})}
+else{t.hy+=1;note("🎧 « "+t.name+" » ajouté à une playlist éditoriale !","🎧")}}
+function tick(){S.t++;let sg=0;const bo=S.bo>S.t,fb=(1+Math.sqrt(fans())/6)*(1+S.rep/200)*(bo?1.4:1);
+for(const t of S.tr){t.hy=Math.max(.45,t.hy*.997);const g=(1+t.q/6)*t.hy*t.mu*fb*(.7+Math.random()*.6);
+if(t.p.sp){t.st+=g;S.sp.f+=g*.06;S.tot.st+=g;sg+=g;const r=g*.03*(bo?.9:1);S.m+=r;S.rv.sp+=r}
+if(t.p.yt){const v=g*.7;t.vw+=v;S.yt.v+=v;S.yt.s+=v*.03;const r=v*.012;S.m+=r;S.rv.yt+=r}
+if(t.p.ig){const l=g*.9;t.lk+=l;S.ig.l+=l;S.ig.f+=l*.04}
+if(t.p.sp||t.p.yt||t.p.ig)S.rep+=g*.0004}
+S.sp.ml=S.sp.ml*.95+sg*30*.05;if(S.t%3===0){S.hist.push(sg);if(S.hist.length>40)S.hist.shift()}
+GL.forEach((g,i)=>{if(!S.gl.includes(i)&&g[1](S)){S.gl.push(i);S.m+=g[2];note("🎯 Objectif accompli : "+g[0]+" — +"+g[2]+" €","🎯");addXp(10)}});
+if(S.ev&&S.t>=S.ev){S.ev=0;evt(0)}else if(S.t%10===0&&Math.random()<.25)evt();
+if(S.t%5===0)save();if(view==="stats"&&S.t%3===0)render();else upd()}
+/* ---------- Interface ---------- */
+const V={m:()=>fm(S.m)+" €",f:()=>fm(fans()),lv:()=>"Niv. "+S.lv+" · "+fm(S.xp)+"/"+need(S.lv)+" XP",rep:()=>fm(S.rep),spf:()=>fm(S.sp.f),ml:()=>fm(S.sp.ml),yts:()=>fm(S.yt.s),ytv:()=>fm(S.yt.v),igf:()=>fm(S.ig.f),igl:()=>fm(S.ig.l),st:()=>fm(S.tot.st),rvs:()=>fm(S.rv.sp)+" €",rvy:()=>fm(S.rv.yt)+" €"};
+function upd(){document.querySelectorAll("[data-b]").forEach(e=>{const k=e.dataset.b;let v;if(k[0]==="t"&&k[1]===":"){const[,id,f]=k.split(":"),t=T(id);v=t?fm(t[f]):""}else v=V[k]?V[k]():"";if(e.textContent!==v)e.textContent=v});$("#xb").style.width=Math.min(100,S.xp/need(S.lv)*100)+"%"}
+function hdr(){const n=([k,i,l])=>`<button class="ni ${view===k?"on":""}" data-a="nav" data-v="${k}"><span class="e">${i}</span>${l}</button>`;$("#nv").innerHTML=NAV.map(n).join("")+`<div class="hd">Plateformes</div>`+PLT.map(n).join("");$("#bell").textContent="🔔"+(S.un&&view!=="home"?" "+S.un:"")}
+function render(){if(view==="home")S.un=0;$("#v").innerHTML=VW[view]();upd();hdr()}
+const row=(t,i,sel)=>`<div class="row" data-a="play" data-id="${t.id}">${sel?`<input type="checkbox" data-a="sel" data-id="${t.id}" ${ui.sel.has(t.id)?"checked":""} style="width:auto">`:`<span class="ix">${i+1}</span>`}<div class="cv s" style="${cv(t)}"></div><div class="gr"><b>${esc(t.name)}</b><small>${INST[t.in][0]} · ${STY[t.sy][0]}${t.ft?" · feat":""}</small></div><span class="qb">${t.q} · ${qn(t.q)}</span><small class="hm" data-b="t:${t.id}:st"></small><span>${["sp","yt","ig"].map(p=>`<button class="pc ${t.p[p]?"on":""}" data-a="pub" data-id="${t.id}" data-v="${p}">${p==="sp"?"Spotify":p==="yt"?"YT":"IG"}</button>`).join("")}</span></div>`;
+const stat=(l,k)=>`<div class="st"><small>${l}</small><b data-b="${k}"></b></div>`;
+function plat(p){const C={sp:"#1ed760",yt:"#ff4e4e",ig:"#e84fb0"}[p];if(p!=="sp"&&S.lv<2)return`<h1>${PN[p]}</h1><div class="pn">🔒 Débloqué au niveau 2. Continue à publier sur Spotify pour progresser !</div>`;
+const K={sp:[["Auditeurs mensuels","ml"],["Followers","spf"],["Écoutes totales","st"],["Revenus","rvs"]],yt:[["Abonnés","yts"],["Vues","ytv"],["Revenus","rvy"]],ig:[["Followers","igf"],["Likes","igl"]]}[p],M={sp:"st",yt:"vw",ig:"lk"}[p],on=S.tr.filter(t=>t.p[p]),off=S.tr.filter(t=>!t.p[p]);
+return`<h1 style="color:${C}">${PN[p]}</h1><div class="c4">${K.map(([l,k])=>stat(l,k)).join("")}</div><h2>En ligne</h2>${on.map((t,i)=>`<div class="row" data-a="play" data-id="${t.id}"><span class="ix">${i+1}</span><div class="cv s" style="${cv(t)}"></div><div class="gr"><b>${esc(t.name)}</b><small>${qn(t.q)}</small></div><b data-b="t:${t.id}:${M}"></b></div>`).join("")||`<p class="mu">Aucun titre publié ici.</p>`}<h2>À publier</h2>${off.map(t=>`<div class="row" style="cursor:default"><div class="cv s" style="${cv(t)}"></div><div class="gr"><b>${esc(t.name)}</b><small>${qn(t.q)}</small></div><button class="btn s" data-a="pub" data-id="${t.id}" data-v="${p}">Publier</button></div>`).join("")||`<p class="mu">Tout est publié.</p>`}`}
+const VW={
+home:()=>{const un=GL.map((g,i)=>[g,i]).filter(([g,i])=>!S.gl.includes(i)).slice(0,3);return`<h1>Salut, <input id="an" value="${esc(S.name)}" maxlength="22"></h1><div class="c4">${stat("Écoutes Spotify","st")+stat("Auditeurs mensuels","ml")+stat("Fans","f")+stat("Argent","m")}</div>
+${S.tr.length?"":`<div class="pn"><h3>Bienvenue !</h3>Tu pars de zéro : 0 son, 0 fan, 0 €. Crée ton premier son dans le Studio, publie-le, puis regarde les écoutes grimper.<br><br><button class="btn big" data-a="nav" data-v="studio">🎛️ Créer mon premier son</button></div>`}
+<h2>Prochains objectifs</h2>${un.map(([g])=>`<div class="nt"><span>🎯</span><p>${g[0]}</p><small>+${g[2]} €</small></div>`).join("")||`<p class="mu">Tous les objectifs sont accomplis, bravo !</p>`}
+<h2>Notifications</h2>${S.nt.slice(0,8).map(n=>`<div class="nt"><span>${n.ico}</span><p>${esc(n.txt)}</p>${n.act?`<button class="btn s" data-a="nact" data-id="${n.id}">${n.act.l}</button><button class="btn s" data-a="nno" data-id="${n.id}">✕</button>`:""}</div>`).join("")||`<p class="mu">Rien pour l’instant.</p>`}
+${S.tr.length?`<h2>Tes sons</h2><div class="grid">${S.tr.slice(0,8).map(t=>`<div class="card" data-a="play" data-id="${t.id}"><div class="cv" style="${cv(t)}"></div><b>${esc(t.name)}</b><small>${qn(t.q)} · <span data-b="t:${t.id}:st"></span> écoutes</small></div>`).join("")}</div>`:""}`},
+studio:()=>{const d=ui.d,l=ui.last&&T(ui.last),g=GEAR[S.gear],ch=(a,i,on,lk,txt)=>`<button class="chip ${on?"on":""}" data-a="${a}" data-v="${i}" ${lk?"disabled":""}>${txt}</button>`;
+return`<h1>Studio</h1>${l?`<div class="pn" style="display:flex;gap:14px;align-items:center"><div class="cv s" style="${cv(l)};width:84px"></div><div class="gr"><small>Dernier son enregistré</small><b>${esc(l.name)}</b><small>Qualité ${l.q}/100 · ${qn(l.q)}</small></div>${l.p.sp?"":`<button class="btn" data-a="pub" data-id="${l.id}" data-v="sp">Publier sur Spotify</button>`}</div>`:""}
+<div class="pn"><h3>1 · Titre</h3><input id="nm" placeholder="Nom du titre (auto si vide)" value="${esc(d.name)}" maxlength="40"></div>
+<div class="pn"><h3>2 · Instrument</h3>${INST.map((x,i)=>ch("in",i,d.in===i,S.lv<x[1],x[2]+" "+x[0]+(S.lv<x[1]?" 🔒 niv. "+x[1]:""))).join("")}</div>
+<div class="pn"><h3>3 · Style</h3>${STY.map((x,i)=>ch("sy",i,d.sy===i,S.lv<x[1],x[0]+(S.lv<x[1]?" 🔒 niv. "+x[1]:""))).join("")}</div>
+<div class="pn"><h3>4 · Rythme</h3>${RH.map((x,i)=>ch("rh",i,d.rh===i,0,x[0])).join("")}<br><input type="range" id="bp" min="70" max="160" value="${d.bpm}"> <small id="bv">${d.bpm} BPM</small></div>
+<div class="pn"><h3>5 · Mélodie — touche une case pour changer la note</h3><div class="mel">${d.mel.map((m,i)=>`<button class="ce" data-a="cell" data-v="${i}"><i style="height:${m<0?0:14+m*12}%"></i></button>`).join("")}</div></div>
+<button class="btn s" data-a="gen">🎲 Mélodie aléatoire</button><button class="btn s" data-a="pvw">▶ Écouter</button><button class="btn big" data-a="rec">● Enregistrer</button>
+<h2>Matériel</h2><div class="pn">${g?`<b>${g[0]}</b> — ${g[1]} € · +${g[2]} de qualité sur tes futurs sons <button class="btn" data-a="buy">Acheter</button>`:"Studio au maximum !"}<br><small>Matériel possédé : ${S.gear}/${GEAR.length}</small></div>`},
+lib:()=>{let b;if(ui.lt==="s")b=(S.tr.length?S.tr.map((t,i)=>row(t,i,1)).join(""):`<p class="mu">Aucun son pour l’instant. Va au Studio !</p>`)+`<div class="pn"><h3>Sélection : <span id="sc">${ui.sel.size}</span> son(s)</h3><input id="gn" placeholder="Nom de l’album / playlist"><br><button class="btn" data-a="mk" data-v="al">💿 Créer un album (3+)</button><button class="btn s" data-a="mk" data-v="pl">🎧 Créer une playlist</button></div>`;
+else{const L=ui.lt==="a"?S.al:S.pl;b=L.length?`<div class="grid">${L.map(x=>`<div class="card" data-a="pa" data-v="${ui.lt}" data-id="${x.id}"><div class="cv" style="${cv(x)}"></div><b>${esc(x.name)}</b><small>${x.tr.length} titres</small></div>`).join("")}</div>`:`<p class="mu">Rien ici pour l’instant. Sélectionne des sons dans l’onglet Sons.</p>`}
+return`<h1>Bibliothèque</h1>${[["s","Sons"],["a","Albums"],["p","Playlists"]].map(([k,n])=>`<button class="chip ${ui.lt===k?"on":""}" data-a="lt" data-v="${k}">${n}</button>`).join("")}<div style="margin-top:12px">${b}</div>`},
+collab:()=>{const rq=S.nt.filter(n=>n.act&&n.act.a==="req");return`<h1>Collabs</h1>${rq.length?`<h2>Demandes reçues</h2>${rq.map(n=>`<div class="nt"><span>🤝</span><p>${esc(n.txt)}</p><button class="btn s" data-a="nact" data-id="${n.id}">Accepter</button><button class="btn s" data-a="nno" data-id="${n.id}">✕</button></div>`).join("")}`:""}<div class="pn"><h3>Ton titre pour le feat</h3>${S.tr.length?`<select id="ct">${S.tr.map(t=>`<option value="${t.id}">${esc(t.name)} (${t.q})</option>`).join("")}</select>`:"Crée d’abord un son."}</div>${ART.map(([n,p],i)=>`<div class="row" style="cursor:default"><div class="cv s" style="${cv({sd:n.length*4111+p*97})}"></div><div class="gr"><b>${n}</b><small>Popularité ${p}/100 · ${Math.round(chance(p)*100)} % de chances</small></div><button class="btn" data-a="ask" data-v="${i}">Proposer</button></div>`).join("")}`},
+conc:()=>{const f=fans();return`<h1>Concerts</h1><h3>Choisis une salle</h3>${VEN.map((v,i)=>`<div class="vn ${ui.v===i?"on":""} ${f<v[3]?"lk":""}" data-a="venue" data-v="${i}"><span><b>${v[0]}</b><br><small>${fm(v[1])} places · ${v[2]} € le billet</small></span><small>${f<v[3]?"🔒 "+fm(v[3])+" fans":"Débloquée"}</small></div>`).join("")}<h3 style="margin-top:14px">Setlist (max 6)</h3>${S.tr.length?S.tr.map(t=>`<button class="chip ${ui.set.includes(t.id)?"on":""}" data-a="set" data-id="${t.id}">${esc(t.name)}</button>`).join(""):`<p class="mu">Crée des sons pour composer une setlist.</p>`}<p><button class="btn big" data-a="go">🎤 Lancer le concert</button></p>${S.lc?`<div class="pn"><h3>Dernier concert</h3>${S.lc}</div>`:""}`},
+stats:()=>{const mx=Math.max(1,...S.hist),top=[...S.tr].sort((a,b)=>(b.st+b.vw+b.lk)-(a.st+a.vw+a.lk)).slice(0,5);return`<h1>Stats</h1><div class="pn"><h3>Écoutes Spotify par seconde (récent)</h3><svg viewBox="0 0 400 100" preserveAspectRatio="none" style="width:100%;height:120px">${S.hist.map((v,i)=>`<rect x="${i*10}" y="${100-v/mx*95}" width="8" height="${v/mx*95}" rx="2" fill="#1ed760"/>`).join("")}</svg></div><div class="c4">${stat("Followers Spotify","spf")+stat("Abonnés YouTube","yts")+stat("Followers Instagram","igf")+stat("Réputation","rep")}<div class="st"><small>Sons / albums</small><b>${S.tr.length} / ${S.al.length}</b></div><div class="st"><small>Concerts / feats</small><b>${S.tot.cn} / ${S.tot.ft}</b></div></div><h2>Top sons</h2>${top.map((t,i)=>row(t,i)).join("")||`<p class="mu">Pas encore de données.</p>`}<h2>Zone dangereuse</h2><button class="btn s" data-a="reset">Réinitialiser la progression</button>`},
+sp:()=>plat("sp"),yt:()=>plat("yt"),ig:()=>plat("ig")};
+/* ---------- Actions ---------- */
+document.addEventListener("input",e=>{const i=e.target;if(i.id==="nm")ui.d.name=i.value;else if(i.id==="an"){S.name=i.value.trim()||"Artiste inconnu";pui()}else if(i.id==="bp"){ui.d.bpm=+i.value;$("#bv").textContent=i.value+" BPM"}});
+document.addEventListener("click",e=>{const el=e.target.closest("[data-a]");if(!el)return;const a=el.dataset.a,id=+el.dataset.id,v=el.dataset.v;switch(a){
+case"nav":view=v;render();$("#main").scrollTop=0;break;
+case"bell":view="home";render();break;
+case"play":{const t=T(id);if(!t)return;play(t,el.dataset.q?el.dataset.q.split(",").map(Number):S.tr.map(x=>x.id));break}
+case"pa":{const x=(v==="a"?S.al:S.pl).find(o=>o.id===id),ids=x.tr.filter(T);if(ids.length)play(T(ids[0]),ids);break}
+case"tog":if(cur)stop();else if(last&&!last.pv)play(last,queue);else if(S.tr[0])play(S.tr[0]);break;
+case"nxt":{const n=T(queue[qi+1]);n?play(n,queue):toast("Fin de la file.");break}
+case"prv":{const r=cur?cur.tr:last;if(!r)return;const p=T(queue[qi-1]);(cur&&cur.s>8||!p)?play(r,queue):play(p,queue);break}
+case"pub":{const t=T(id);if(t.p[v])return toast("Déjà publié sur "+PN[v]+".");if(v!=="sp"&&S.lv<2)return toast("🔒 "+PN[v]+" se débloque au niveau 2.");t.p[v]=1;t.hy=Math.max(t.hy,1.5);S.rep+=1;if(!S.ev&&!S.nt.some(n=>n.ico==="💬"))S.ev=S.t+15;addXp(15);note("🚀 « "+t.name+" » est en ligne sur "+PN[v]+" !","🚀");render();save();break}
+case"in":ui.d.in=+v;render();break;
+case"sy":ui.d.sy=+v;ui.d.bpm=STY[+v][2];render();break;
+case"rh":ui.d.rh=+v;render();break;
+case"cell":ui.d.mel[+v]=(ui.d.mel[+v]+2)%9-1;render();break;
+case"gen":ui.d.mel=gen();render();break;
+case"pvw":play({...ui.d,pv:1,id:0,name:ui.d.name||"Aperçu",sd:12345});break;
+case"rec":{const d=ui.d;if(d.mel.filter(x=>x>=0).length<3)return toast("Ajoute au moins 3 notes à ta mélodie.");const n=d.name.trim()||W1[Math.random()*W1.length|0]+" "+W2[Math.random()*W2.length|0],t={id:S.id++,name:n,in:d.in,sy:d.sy,rh:d.rh,bpm:d.bpm,mel:[...d.mel],q:qual(d),sd:Math.random()*99999|0,p:{},st:0,vw:0,lk:0,hy:1,mu:1,ft:null};S.tr.unshift(t);ui.last=t.id;d.name="";addXp(12+Math.round(t.q/8));note("🎼 Nouveau son : « "+n+" » — qualité "+t.q+" ("+qn(t.q)+")","🎼");render();save();break}
+case"buy":{const g=GEAR[S.gear];if(!g||S.m<g[1])return toast("Pas assez d’argent.");S.m-=g[1];S.gear++;note("🛒 "+g[0]+" acheté : +"+g[2]+" de qualité sur tes sons !","🛒");render();break}
+case"lt":ui.lt=v;render();break;
+case"sel":el.checked?ui.sel.add(id):ui.sel.delete(id);$("#sc").textContent=ui.sel.size;return;
+case"mk":{const ids=[...ui.sel].filter(T),n=$("#gn").value.trim(),al=v==="al";if(al&&ids.length<3)return toast("Il faut au moins 3 sons pour un album.");if(!ids.length)return toast("Sélectionne d’abord des sons.");const o={id:S.id++,name:n||(al?"Album":"Playlist")+" #"+((al?S.al:S.pl).length+1),tr:ids,sd:Math.random()*99999|0};(al?S.al:S.pl).unshift(o);if(al){ids.forEach(i=>{T(i).mu*=1.1;T(i).hy+=.6});addXp(30);note("💿 Album « "+o.name+" » sorti ! Tes titres en profitent.","💿")}else note("🎧 Playlist « "+o.name+" » créée.","🎧");ui.sel.clear();ui.lt=al?"a":"p";render();break}
+case"ask":{const s=$("#ct");if(!s)return toast("Crée d’abord un son.");const[n,p]=ART[+v],c=S.cd["a"+v]||0;if(c>S.t)return toast(n+" est occupé·e, réessaie dans "+(c-S.t)+" s.");S.cd["a"+v]=S.t+20;if(Math.random()<chance(p))feat(T(s.value),n,p);else note("😕 "+n+" a décliné ta proposition. Grandis encore !","😕");render();break}
+case"nact":{const n=S.nt.find(x=>x.id===id);if(!n||!n.act)return;const A=n.act;if(A.a==="label"){S.m+=A.v;S.bo=S.t+120;toast("Contrat signé : +"+A.v+" € !")}else{if(!S.tr.length)return toast("Crée d’abord un son pour ce feat.");const B=ART.find(x=>x[0]===A.v)||ART[0];feat([...S.tr].sort((x,y)=>y.q-x.q)[0],B[0],B[1])}n.act=null;render();break}
+case"nno":{const n=S.nt.find(x=>x.id===id);if(n)n.act=null;render();break}
+case"venue":if(fans()<VEN[+v][3])return toast("Salle verrouillée : "+fm(VEN[+v][3])+" fans requis.");ui.v=+v;render();break;
+case"set":{const i=ui.set.indexOf(id);if(i>=0)ui.set.splice(i,1);else if(ui.set.length<6)ui.set.push(id);else toast("Setlist pleine.");render();break}
+case"go":{const ts=ui.set.map(T).filter(Boolean);if(!ts.length)return toast("Choisis au moins un titre pour la setlist.");const cd=S.cd.cn||0;if(cd>S.t)return toast("La salle est occupée encore "+(cd-S.t)+" s.");const vn=VEN[ui.v],aq=ts.reduce((x,t)=>x+t.q,0)/ts.length,sold=Math.min(vn[1],Math.round((fans()*.5+S.sp.ml*.1+10)*(.4+aq/100))),rev=sold*vn[2],cost=Math.round(vn[1]*vn[2]*.1),pr=rev-cost;S.m=Math.max(0,S.m+pr);S.sp.f+=sold*.08;S.rep+=sold/vn[1]*2+ui.v;S.tot.cn++;S.cd.cn=S.t+15;addXp(20+ui.v*25);S.lc=`${vn[0]} : ${fm(sold)}/${fm(vn[1])} billets · recette ${fm(rev)} € · frais ${fm(cost)} € · <b>${pr>=0?"+":"−"}${fm(Math.abs(pr))} €</b>`;note("🎤 "+vn[0]+" : "+fm(sold)+" billets vendus ("+(pr>=0?"+":"−")+fm(Math.abs(pr))+" €)","🎤");render();break}
+case"reset":if(!ui.rs){ui.rs=1;toast("Clique encore pour tout effacer.");setTimeout(()=>ui.rs=0,4000)}else{ui.rs=0;stop();try{localStorage.removeItem(KEY)}catch(x){}S=D();ui.d=nd();ui.last=0;ui.set=[];ui.sel.clear();view="home";render();toast("Nouvelle carrière !")}break}});
+addEventListener("visibilitychange",save);addEventListener("pagehide",save);
+ui.d=nd();hdr();render();pui();setInterval(tick,1000);
+</script></body></html>
